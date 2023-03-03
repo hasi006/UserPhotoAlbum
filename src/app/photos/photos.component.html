@@ -1,0 +1,18 @@
+<div class="card">
+    <p-dataView [value]="photos" layout="list" [paginator]="true" [rows]="4">
+        <ng-template pTemplate="header">
+            <div class="flex flex-column md:flex-row md:justify-content-between">
+            </div>
+        </ng-template>
+        <ng-template let-photo pTemplate="listItem">
+            <div class="col-12">
+                <div class="product-list-item">
+                    <img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+                    <div class="product-list-detail">
+                        <div class="product-name">{{photo.title}}</div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
+</div>

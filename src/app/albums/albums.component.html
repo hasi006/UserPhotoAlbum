@@ -1,0 +1,9 @@
+<!-- order list to view all the album titles available -->
+<p-orderList [value]="albums" [listStyle]="{'height':'auto'}" [metaKeySelection]="true" header="List of Albums" 
+filterBy="title" filterPlaceholder="Filter by title" (onSelectionChange)="viewPhotos($event)">
+    <ng-template let-album pTemplate="item">
+        <div>
+            <div style="font-size:16px;margin:15px 5px 0 0;font-weight: bold;">{{album.title}}</div>
+        </div>
+    </ng-template>
+</p-orderList>
